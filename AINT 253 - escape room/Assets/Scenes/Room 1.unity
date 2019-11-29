@@ -57,7 +57,7 @@ LightmapSettings:
     serializedVersion: 12
     m_Resolution: 2
     m_BakeResolution: 10
-    m_AtlasSize: 512
+    m_AtlasSize: 4096
     m_AO: 0
     m_AOMaxDistance: 1
     m_CompAOExponent: 1
@@ -97,7 +97,8 @@ LightmapSettings:
     m_PVRFilteringAtrousPositionSigmaAO: 1
     m_ExportTrainingData: 0
     m_TrainingDataDestination: TrainingData
-  m_LightingDataAsset: {fileID: 0}
+  m_LightingDataAsset: {fileID: 112000000, guid: 3fa5f91210d64ba49a3f73b1aef32e43,
+    type: 2}
   m_UseShadowmask: 1
 --- !u!196 &4
 NavMeshSettings:
@@ -609,7 +610,7 @@ PrefabInstance:
     - target: {fileID: -927199367670048503, guid: bfb565032981d0d4eaa3c5d7fb687863,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: bfb565032981d0d4eaa3c5d7fb687863,
         type: 3}
@@ -2242,7 +2243,7 @@ PrefabInstance:
     - target: {fileID: 8707172717234246264, guid: 92662138dc36aa54eac3394433623896,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5660266810657644651, guid: 92662138dc36aa54eac3394433623896,
         type: 3}
