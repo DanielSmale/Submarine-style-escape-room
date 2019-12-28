@@ -11,7 +11,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{DF60C4B0-D47A-7762-B0BB-46F111EE6224}</ProjectGuid>
+    <ProjectGuid>{D1D0C6AD-83FF-87E2-3657-4EBA5C4ADFD3}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Assembly-CSharp</AssemblyName>
@@ -64,33 +64,36 @@
   <ItemGroup>
     <Compile Include="Assets\Scripts\CharacterLook.cs" />
     <Compile Include="Assets\Scripts\CharacterMovement.cs" />
+    <Compile Include="Assets\Scripts\Dialog.cs" />
+    <Compile Include="Assets\Scripts\DialogManager.cs" />
+    <Compile Include="Assets\Scripts\DialogTrigger.cs" />
     <Compile Include="Assets\Scripts\Puzzle_1.cs" />
     <Reference Include="Unity.Timeline.Editor">
-      <HintPath>C:/Users/Student/Documents/GitHub/Submarine-style-escape-room/AINT 253 - escape room/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
+      <HintPath>C:/Users/Student/Documents/GitHub/Submarine-style-escape-room/AINT 253 - escape room old version 1/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.VSCode.Editor">
-      <HintPath>C:/Users/Student/Documents/GitHub/Submarine-style-escape-room/AINT 253 - escape room/Library/ScriptAssemblies/Unity.VSCode.Editor.dll</HintPath>
+      <HintPath>C:/Users/Student/Documents/GitHub/Submarine-style-escape-room/AINT 253 - escape room old version 1/Library/ScriptAssemblies/Unity.VSCode.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.TextMeshPro.Editor">
-      <HintPath>C:/Users/Student/Documents/GitHub/Submarine-style-escape-room/AINT 253 - escape room/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
+      <HintPath>C:/Users/Student/Documents/GitHub/Submarine-style-escape-room/AINT 253 - escape room old version 1/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.UI">
-      <HintPath>C:/Users/Student/Documents/GitHub/Submarine-style-escape-room/AINT 253 - escape room/Library/ScriptAssemblies/UnityEngine.UI.dll</HintPath>
+      <HintPath>C:/Users/Student/Documents/GitHub/Submarine-style-escape-room/AINT 253 - escape room old version 1/Library/ScriptAssemblies/UnityEngine.UI.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Timeline">
-      <HintPath>C:/Users/Student/Documents/GitHub/Submarine-style-escape-room/AINT 253 - escape room/Library/ScriptAssemblies/Unity.Timeline.dll</HintPath>
+      <HintPath>C:/Users/Student/Documents/GitHub/Submarine-style-escape-room/AINT 253 - escape room old version 1/Library/ScriptAssemblies/Unity.Timeline.dll</HintPath>
     </Reference>
     <Reference Include="Unity.CollabProxy.Editor">
-      <HintPath>C:/Users/Student/Documents/GitHub/Submarine-style-escape-room/AINT 253 - escape room/Library/ScriptAssemblies/Unity.CollabProxy.Editor.dll</HintPath>
+      <HintPath>C:/Users/Student/Documents/GitHub/Submarine-style-escape-room/AINT 253 - escape room old version 1/Library/ScriptAssemblies/Unity.CollabProxy.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Rider.Editor">
-      <HintPath>C:/Users/Student/Documents/GitHub/Submarine-style-escape-room/AINT 253 - escape room/Library/ScriptAssemblies/Unity.Rider.Editor.dll</HintPath>
+      <HintPath>C:/Users/Student/Documents/GitHub/Submarine-style-escape-room/AINT 253 - escape room old version 1/Library/ScriptAssemblies/Unity.Rider.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.TextMeshPro">
-      <HintPath>C:/Users/Student/Documents/GitHub/Submarine-style-escape-room/AINT 253 - escape room/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
+      <HintPath>C:/Users/Student/Documents/GitHub/Submarine-style-escape-room/AINT 253 - escape room old version 1/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
     </Reference>
     <Reference Include="UnityEditor.UI">
-      <HintPath>C:/Users/Student/Documents/GitHub/Submarine-style-escape-room/AINT 253 - escape room/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
+      <HintPath>C:/Users/Student/Documents/GitHub/Submarine-style-escape-room/AINT 253 - escape room old version 1/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.AIModule">
       <HintPath>C:/Program Files/Unity/Hub/Editor/2019.2.3f1/Editor/Data/Managed/UnityEngine/UnityEngine.AIModule.dll</HintPath>

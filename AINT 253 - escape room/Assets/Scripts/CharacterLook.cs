@@ -14,7 +14,7 @@ public class CharacterLook : MonoBehaviour
 
     private void Start()
     {
-        Cursor.lockState = CursorLockMode.Locked;
+
     }
 
     void Update()
