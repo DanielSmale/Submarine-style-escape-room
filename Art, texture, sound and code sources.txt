@@ -1,2 +1,7 @@
 Textures:
 - https://www.wildtextures.com/free-textures/metal/bright-cold-galvanized-metal-sheet/
+
+
+Maps of coastlines taken from:
+- https://pixabay.com/vectors/usa-map-united-states-of-america-35713/
+
