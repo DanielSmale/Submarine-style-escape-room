@@ -9,13 +9,14 @@ public class CharacterLook : MonoBehaviour
     public float mouseSensitivity = 100f;
 
     public Transform playerBody;
-      
+
     float xRotation = 0f;
 
-    private void Start()
+    void Start()
     {
-
+    
     }
+
 
     void Update()
     {
