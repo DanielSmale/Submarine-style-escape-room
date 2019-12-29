@@ -4,5 +4,10 @@ Textures:
 
 Maps of coastlines taken from:
 - https://pixabay.com/vectors/usa-map-united-states-of-america-35713/
+Then editted green in photoshop.
+
+Outline of submarine taken from:
+- https://printablefreecoloring.com/drawings/transport/submarine/15/
+Then editted green in photoshop.
 
 Underwater sound effect taken from nanostudios 'breathing' effect with pitch lowered and one track traposed over the other.
