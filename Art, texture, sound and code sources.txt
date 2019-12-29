@@ -10,4 +10,8 @@ Outline of submarine taken from:
 - https://printablefreecoloring.com/drawings/transport/submarine/15/
 Then editted green in photoshop.
 
+Sounds:
+- Alarm sound taken from: https://freesound.org/people/kallesv/sounds/460161/
+- Morse code beep taken from: https://freesound.org/people/klankbeeld/sounds/243351/
+
 Underwater sound effect taken from nanostudios 'breathing' effect with pitch lowered and one track traposed over the other.
