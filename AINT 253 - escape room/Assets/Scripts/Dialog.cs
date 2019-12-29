@@ -23,6 +23,10 @@ public class Dialog : MonoBehaviour
     public GameObject btnB2;
     public GameObject btnC2;
 
+    public GameObject btnA3;
+    public GameObject btnB3;
+    public GameObject btnC3;
+
     public GameObject question1UI;
     public GameObject question2UI;
     public GameObject question3UI;
@@ -63,6 +67,17 @@ public class Dialog : MonoBehaviour
             btnB2.SetActive(true);
             btnC2.SetActive(true);
         }
+
+        if (textDisplay.text == sentences[2])
+        {
+            btnA3.SetActive(true);
+            btnB3.SetActive(true);
+            btnC3.SetActive(true);
+
+
+            question3UI.SetActive(true);
+        }
+
     }
     public void Question1Fail()
     {
@@ -116,7 +131,6 @@ public class Dialog : MonoBehaviour
         question2UI.SetActive(false);
 
 
-        question3UI.SetActive(true);
     }
 
     public void Question2Pass()
