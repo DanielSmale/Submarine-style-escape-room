@@ -5047,6 +5047,7 @@ GameObject:
   - component: {fileID: 1518285265}
   - component: {fileID: 1518285263}
   - component: {fileID: 1518285266}
+  - component: {fileID: 1518285267}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -5095,16 +5096,16 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: ad3f44a0f130cea43af33a7f00bfff33, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 0.45
-  m_Pitch: 0
+  m_Volume: 1
+  m_Pitch: 1
   Loop: 1
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
-  Priority: 166
+  Priority: 128
   DopplerLevel: 1
-  MinDistance: 13.292639
-  MaxDistance: 25856.162
+  MinDistance: 1
+  MaxDistance: 500
   Pan2D: 0
   rolloffMode: 0
   BypassEffects: 0
@@ -5275,6 +5276,19 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &1518285267
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1518285262}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7a2ce053110b57649a5de8e507efb0a9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  restartDelay: 2
 --- !u!1 &1555698182 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -927199367670048503, guid: 6e30fe58e9ab93849914dc72462c84ea,
