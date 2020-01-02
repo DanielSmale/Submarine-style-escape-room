@@ -112,10 +112,10 @@ MonoBehaviour:
     y: 30
     width: 1536
     height: 731
-  m_MinSize: {x: 711, y: 494}
-  m_MaxSize: {x: 18006, y: 14044}
+  m_MinSize: {x: 713, y: 494}
+  m_MaxSize: {x: 18008, y: 14044}
   vertical: 0
-  controlID: 7634
+  controlID: 7401
 --- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -137,10 +137,10 @@ MonoBehaviour:
     y: 0
     width: 923
     height: 731
-  m_MinSize: {x: 202, y: 322}
-  m_MaxSize: {x: 4002, y: 8022}
+  m_MinSize: {x: 202, y: 344}
+  m_MaxSize: {x: 4002, y: 8044}
   vertical: 1
-  controlID: 7534
+  controlID: 7402
 --- !u!114 &7
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -219,7 +219,7 @@ MonoBehaviour:
   m_MinSize: {x: 234, y: 494}
   m_MaxSize: {x: 10004, y: 14044}
   vertical: 1
-  controlID: 7608
+  controlID: 7446
 --- !u!114 &10
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -359,15 +359,15 @@ MonoBehaviour:
       width: 1540
       height: 695
     m_Scale: {x: 1.2298737, y: 1.2298737}
-    m_Translation: {x: 763.4033, y: 352.93726}
+    m_Translation: {x: 847.0867, y: 287.2731}
     m_MarginLeft: 0
     m_MarginRight: 0
     m_MarginTop: 0
     m_MarginBottom: 0
     m_LastShownAreaInsideMargins:
       serializedVersion: 2
-      x: -620.71686
-      y: -286.97034
+      x: -688.7591
+      y: -233.57936
       width: 1252.1611
       height: 565.0987
     m_MinimalGUI: 1
@@ -415,9 +415,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 575.5, y: 325.5, z: 0}
+    m_Target: {x: -0.07439566, y: 0.5000551, z: 8.3575325}
     speed: 2
-    m_Value: {x: 575.5, y: 325.5, z: 0}
+    m_Value: {x: -0.07439566, y: 0.5000551, z: 8.3575325}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -446,13 +446,13 @@ MonoBehaviour:
       speed: 2
       m_Value: 0
   m_Rotation:
-    m_Target: {x: 0, y: 0, z: 0, w: 1}
+    m_Target: {x: -0.18186761, y: -0.30605268, z: 0.059687685, w: -0.9325756}
     speed: 2
-    m_Value: {x: -0, y: 0, z: -0, w: -1}
+    m_Value: {x: -0.1818676, y: -0.30605265, z: 0.05968768, w: -0.9325755}
   m_Size:
-    m_Target: 829.6602
+    m_Target: 6.794977
     speed: 2
-    m_Value: 829.6602
+    m_Value: 6.794977
   m_Ortho:
     m_Target: 0
     speed: 2
@@ -906,10 +906,10 @@ MonoBehaviour:
   m_ViewDataDictionary: {fileID: 0}
   m_SceneHierarchy:
     m_TreeViewState:
-      scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: 
-      m_LastClickedID: 0
-      m_ExpandedIDs: fedfffffe2e3ffff5ce4ffff9ce4ffffc4e8ffffc6e8ffff06e9ffff78f0ffff7cf9ffff7afaffff78fbffffb44b0000ba4b0000c24d00001e4e00006a4e0000704e00008a4e0000
+      scrollPos: {x: 0, y: 446}
+      m_SelectedIDs: e6320000
+      m_LastClickedID: 13030
+      m_ExpandedIDs: c0faffffd6faffff78fbffffac32000052330000
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -972,21 +972,21 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Scenes
+    - Assets/Scripts
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/Scenes
+  - Assets/Scripts
   m_LastFoldersGridSize: -1
   m_LastProjectPath: C:\Users\Student\Documents\GitHub\Submarine-style-escape-room\AINT
     253 - escape room
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
-    scrollPos: {x: 0, y: 62}
-    m_SelectedIDs: 7e2e0000
-    m_LastClickedID: 11902
-    m_ExpandedIDs: 00000000ac2c0000182d00005e2e0000862e00001a3100001c3100001e31000000ca9a3b
+    scrollPos: {x: 0, y: 0}
+    m_SelectedIDs: 762d0000
+    m_LastClickedID: 11638
+    m_ExpandedIDs: 00000000ae2c0000882e0000083100000a3100000c31000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -1014,7 +1014,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 00000000ac2c0000182d00005e2e0000862e00001a3100001c3100001e31000000ca9a3b
+    m_ExpandedIDs: 00000000ae2c0000882e0000083100000a3100000c31000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -1066,7 +1066,7 @@ MonoBehaviour:
       m_Icon: {fileID: 0}
       m_ResourceFile: 
     m_NewAssetIndexInList: -1
-    m_ScrollPosition: {x: 0, y: 0}
+    m_ScrollPosition: {x: 0, y: 78}
     m_GridSize: 64
   m_SkipHiddenPackages: 0
   m_DirectoriesAreaWidth: 112

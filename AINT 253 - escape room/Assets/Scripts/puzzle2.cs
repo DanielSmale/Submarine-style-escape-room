@@ -17,15 +17,11 @@ public class puzzle2 : MonoBehaviour
     private void Start()
     {
         failAudio = GetComponent<AudioSource>();
-
-
     }
 
     private void Update()
     {
-
-
-        if (Input.GetMouseButtonDown(0))
+        if (Input.GetMouseButton(0))
         {
             RaycastHit hit;
 
@@ -38,14 +34,26 @@ public class puzzle2 : MonoBehaviour
                 {
                     Debug.Log("hit " + hit.collider.gameObject.name);
 
-                    increaseValve.transform.Rotate(Vector3.left * 20 * Time.deltaTime); // rotate the valve
-                    submarineUI.transform.Rotate(Vector3.left * 20 * Time.deltaTime);  // and increase the pitch of the submarine
+                   // decreaseValve.transform.Rotate(Vector3.back * 50 * Time.deltaTime); // rotate the opposite valve
+
+                    increaseValve.transform.Rotate(Vector3.forward * 50 * Time.deltaTime); // rotate the valve
+                    submarineUI.transform.Rotate(Vector3.forward * 50 * Time.deltaTime);  // and increase the pitch of the submarine
+                }
+
+                if (hit.collider.gameObject.name == "DecreaseValve")
+                {
+                    Debug.Log("hit " + hit.collider.gameObject.name);
+
+                    increaseValve.transform.Rotate(Vector3.forward * 50 * Time.deltaTime);// rotate the opposite valve
+
+                    decreaseValve.transform.Rotate(Vector3.back * 50 * Time.deltaTime); // rotate the valve
+                    submarineUI.transform.Rotate(Vector3.back * 50 * Time.deltaTime);  // and increase the pitch of the submarine
                 }
             }
         }
     }
 
-    
+
 
 
 }
