@@ -9,6 +9,7 @@ public class puzzle2 : MonoBehaviour
     public GameObject decreaseValve;
 
     AudioSource failAudio; // the audio that plays when the player is failing the puzzle
+    public Animation failAnimation; // the animation that will play when the player is struggling with the puzzle
 
     Vector3 player; // this is the origin of the raycast
 
@@ -34,7 +35,7 @@ public class puzzle2 : MonoBehaviour
                 {
                     Debug.Log("hit " + hit.collider.gameObject.name);
 
-                   // decreaseValve.transform.Rotate(Vector3.back * 50 * Time.deltaTime); // rotate the opposite valve
+                    decreaseValve.transform.Rotate(Vector3.back * 50 * Time.deltaTime); // rotate the opposite valve
 
                     increaseValve.transform.Rotate(Vector3.forward * 50 * Time.deltaTime); // rotate the valve
                     submarineUI.transform.Rotate(Vector3.forward * 50 * Time.deltaTime);  // and increase the pitch of the submarine
@@ -48,12 +49,31 @@ public class puzzle2 : MonoBehaviour
 
                     decreaseValve.transform.Rotate(Vector3.back * 50 * Time.deltaTime); // rotate the valve
                     submarineUI.transform.Rotate(Vector3.back * 50 * Time.deltaTime);  // and increase the pitch of the submarine
+
                 }
+
+                if (submarineUI.transform.rotation.z < 60 || submarineUI.transform.rotation.z < -60) // if the submarine tilt is too great
+                {
+                    failAudio.Play(); // alert the player they are close to failure
+                    failAnimation.Play();
+                }
+                else
+                {
+                    failAudio.Stop(); // cancel this when the player brings it under control
+                    failAnimation.Stop();
+                }
+
+                if (submarineUI.transform.rotation.z < 80 || submarineUI.transform.rotation.z < -80) // if the submarine tilt is too great
+                {
+                    FindObjectOfType<GameManager>().EndGame(); // they have failed
+                }
+
             }
         }
     }
-
-
-
-
 }
+
+
+
+
+
