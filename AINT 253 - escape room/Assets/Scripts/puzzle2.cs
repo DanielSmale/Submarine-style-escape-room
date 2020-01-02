@@ -13,6 +13,8 @@ public class puzzle2 : MonoBehaviour
 
     Vector3 player; // this is the origin of the raycast
 
+  
+
 
     private void Update()
     {
@@ -27,30 +29,41 @@ public class puzzle2 : MonoBehaviour
 
                 if (hit.collider.gameObject.name == "IncreaseValve")
                 {
-                    decreaseValve.transform.Rotate(Vector3.back * 50 * Time.deltaTime); // rotate the opposite valve
+                    increaseValve.transform.Rotate(Vector3.forward * 30 * Time.deltaTime); // rotate the valve
+                    submarineUI.rectTransform.Rotate(Vector3.forward * 30 * Time.deltaTime);  // and increase the pitch of the submarine
 
-                    increaseValve.transform.Rotate(Vector3.forward * 50 * Time.deltaTime); // rotate the valve
-                    submarineUI.rectTransform.Rotate(Vector3.forward * 50 * Time.deltaTime);  // and increase the pitch of the submarine
+                    decreaseValve.transform.Rotate(Vector3.back * 30 * Time.deltaTime); // rotate the opposite valve
 
-                    Debug.Log("current sub's rotation is: " + submarineUI.rectTransform.rotation);
+                    Debug.Log("current sub's rotation is: " + submarineUI.rectTransform.localEulerAngles.z);
                 }
 
                 if (hit.collider.gameObject.name == "DecreaseValve")
                 {
-                    increaseValve.transform.Rotate(Vector3.forward * 50 * Time.deltaTime);// rotate the opposite valve
+                    decreaseValve.transform.Rotate(Vector3.back * 30 * Time.deltaTime); // rotate the valve
+                    submarineUI.rectTransform.Rotate(Vector3.back * 30 * Time.deltaTime);  // and increase the pitch of the submarine
 
-                    decreaseValve.transform.Rotate(Vector3.back * 50 * Time.deltaTime); // rotate the valve
-                    submarineUI.rectTransform.Rotate(Vector3.back * 50 * Time.deltaTime);  // and increase the pitch of the submarine
+                    increaseValve.transform.Rotate(Vector3.forward * 30 * Time.deltaTime);// rotate the opposite valve
 
-                    Debug.Log("current sub's rotation is: " + submarineUI.rectTransform.rotation);
+                    Debug.Log("current sub's rotation is: " + submarineUI.rectTransform.localEulerAngles.z);
                 }
             }
         }
-        
-        if (submarineUI.rectTransform.localEulerAngles.z < 50 || submarineUI.transform.localEulerAngles.z > -50) // if the submarine tilt is too great
+
+        /*   
+        A button in the game to start the puzzle is needed 
+
+
+
+           
+         
+        if they successfully balance the puzzle for say 2 minutes then they win               
+            
+         */
+
+        if (submarineUI.rectTransform.localEulerAngles.z < 50 || submarineUI.rectTransform.localEulerAngles.z > 300) // if the submarine tilt is too great
         {
-            failAudio.Play(); // alert the player they are close to failure
             failAnimation.Play("UI red flashing");
+            failAudio.Play(); // alert the player they are close to failure
         }
         else
         {
@@ -58,7 +71,7 @@ public class puzzle2 : MonoBehaviour
             failAnimation.Play("Idle");
         }
 
-        if (submarineUI.rectTransform.localEulerAngles.z < 80 || submarineUI.transform.localEulerAngles.z > -80) // if the submarine tilt is too great
+        if (submarineUI.rectTransform.localEulerAngles.z < 80 || submarineUI.rectTransform.localEulerAngles.z > 300) // if the submarine tilt is far too great
         {
 
             //   FindObjectOfType<GameManager>().EndGame(); // they have failed
