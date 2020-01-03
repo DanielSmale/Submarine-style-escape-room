@@ -49,6 +49,7 @@ public class puzzle2 : MonoBehaviour
             }
         }
 
+
         /*   
         A button in the game to start the puzzle is needed 
 
@@ -62,8 +63,9 @@ public class puzzle2 : MonoBehaviour
 
         if (submarineUI.rectTransform.localEulerAngles.z > 45 || submarineUI.rectTransform.localEulerAngles.z > 340) // if the submarine tilt is too great
         {
+            failAudio.Play();
             failAnimation.SetBool("Trigger Flashing", true);
-            failAudio.Play(); // alert the player they are close to failure
+            // alert the player they are close to failure
         }
         else
         {
