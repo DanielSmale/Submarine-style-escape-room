@@ -6,21 +6,32 @@ public class GameManager : MonoBehaviour
 
     bool gameHasEnded = false;
 
-    public float restartDelay = 2;
+    public float restartDelay = 3;
 
-    public void EndGame()
+    public void FailedGame()
     {
         if (gameHasEnded == false)
         {
             gameHasEnded = true;
 
-            Debug.Log("GAME OVER");
-            Invoke("Restart", restartDelay);
+            Invoke("RestartScreen", restartDelay);
         }
     }
 
-    void Restart()
+    void RestartScreen()
     {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        SceneManager.LoadScene("GameOver");
     }
+
+    public void Retry()
+    {
+        SceneManager.LoadScene("Room 1");
+    }
+
+    public void BacktoMenu()
+    {
+        SceneManager.LoadScene("Menu");
+    }
+
+    
 }

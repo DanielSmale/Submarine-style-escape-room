@@ -60,21 +60,21 @@ public class puzzle2 : MonoBehaviour
             
          */
 
-        if (submarineUI.rectTransform.localEulerAngles.z < 50 || submarineUI.rectTransform.localEulerAngles.z > 300) // if the submarine tilt is too great
+        if (submarineUI.rectTransform.localEulerAngles.z > 45 || submarineUI.rectTransform.localEulerAngles.z > 340) // if the submarine tilt is too great
         {
-            failAnimation.Play("UI red flashing");
+            failAnimation.SetBool("Trigger Flashing", true);
             failAudio.Play(); // alert the player they are close to failure
         }
         else
         {
             // cancel this when the player brings it under control
-            failAnimation.Play("Idle");
+            failAnimation.SetBool("Trigger Flashing", false);
         }
 
-        if (submarineUI.rectTransform.localEulerAngles.z < 80 || submarineUI.rectTransform.localEulerAngles.z > 300) // if the submarine tilt is far too great
+        if (submarineUI.rectTransform.localEulerAngles.z > 80 || submarineUI.rectTransform.localEulerAngles.z > 360) // if the submarine tilt is far too great
         {
 
-            //   FindObjectOfType<GameManager>().EndGame(); // they have failed
+              FindObjectOfType<GameManager>().FailedGame(); // they have failed
         }
     }
 }

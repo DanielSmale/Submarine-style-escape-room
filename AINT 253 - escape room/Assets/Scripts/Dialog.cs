@@ -95,7 +95,7 @@ public class Dialog : MonoBehaviour
         btnC1.SetActive(false);
         question1UI.SetActive(false);
 
-        FindObjectOfType<GameManager>().EndGame();
+        FindObjectOfType<GameManager>().FailedGame();
     }
 
     public void Question1Pass()
@@ -132,7 +132,7 @@ public class Dialog : MonoBehaviour
 
         question2UI.SetActive(false);
 
-        FindObjectOfType<GameManager>().EndGame();
+        FindObjectOfType<GameManager>().FailedGame();
 
     }
 
