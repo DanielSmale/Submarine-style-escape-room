@@ -10,14 +10,32 @@ public class puzzle2 : MonoBehaviour
 
     public AudioSource failAudio; // the audio that plays when the player is failing the puzzle
     public Animator failAnimation; // the animation that will play when the player is struggling with the puzzle
+    public float puzzleTime = 120; // how long the players got to solve the puzzle
+    public float balanceTime = 60; // how long the player has to balance the puzzle
+    bool puzzleBegun = false;
+
 
     Vector3 player; // this is the origin of the raycast
 
-  
+    private void Start()
+    {
+        submarineUI.enabled = false;
+    }
 
 
     private void Update()
     {
+        if (puzzleBegun == true)
+        {
+            puzzleTime -= Time.deltaTime;
+        }
+
+        if (puzzleTime <= 0)
+        {
+            Debug.Log("Took to long");
+            FindObjectOfType<GameManager>().FailedGame(); // they have failed
+        }
+
         if (Input.GetMouseButton(0))
         {
             RaycastHit hit;
@@ -49,34 +67,53 @@ public class puzzle2 : MonoBehaviour
             }
         }
 
-
-        /*   
-        A button in the game to start the puzzle is needed 
-
-
-
-           
-         
-        if they successfully balance the puzzle for say 2 minutes then they win               
-            
-         */
-
-        if (submarineUI.rectTransform.localEulerAngles.z > 45 || submarineUI.rectTransform.localEulerAngles.z > 340) // if the submarine tilt is too great
+        if (Input.GetMouseButton(0))
         {
-            failAudio.Play();
-            failAnimation.SetBool("Trigger Flashing", true);
-            // alert the player they are close to failure
-        }
-        else
-        {
-            // cancel this when the player brings it under control
-            failAnimation.SetBool("Trigger Flashing", false);
+            RaycastHit hit;
+
+            Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+
+            if (Physics.Raycast(ray, out hit, 20.0f))
+            {
+                if (hit.collider.gameObject.name == "Start Puzzle 2 button")
+                {                       
+                    submarineUI.enabled = true;
+                    puzzleBegun = true;
+
+                }
+            }
+
+
         }
 
-        if (submarineUI.rectTransform.localEulerAngles.z > 80 || submarineUI.rectTransform.localEulerAngles.z > 360) // if the submarine tilt is far too great
+        if (puzzleBegun == true)
         {
+            if (submarineUI.rectTransform.localEulerAngles.z < 45 || submarineUI.rectTransform.localEulerAngles.z < 340) // if the player is succeeding
+            {
+                balanceTime -= Time.deltaTime;
+                // cancel this when the player brings it under control
+                failAnimation.SetBool("Trigger Flashing", false);
+            }
 
-              FindObjectOfType<GameManager>().FailedGame(); // they have failed
+            if (balanceTime <= 0)
+            {
+                Debug.Log("They win");
+
+            }
+
+            if (submarineUI.rectTransform.localEulerAngles.z > 45 || submarineUI.rectTransform.localEulerAngles.z > 340) // if the submarine tilt is too great
+            {
+                failAudio.Play();
+                failAnimation.SetBool("Trigger Flashing", true);
+                // alert the player they are close to failure
+            }
+
+
+            if (submarineUI.rectTransform.localEulerAngles.z > 80 || submarineUI.rectTransform.localEulerAngles.z > 360) // if the submarine tilt is far too great
+            {
+                Debug.Log("Pressure overloaded");
+                FindObjectOfType<GameManager>().FailedGame(); // they have failed
+            }
         }
     }
 }
