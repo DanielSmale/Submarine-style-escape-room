@@ -31,6 +31,7 @@ public class Dialog : MonoBehaviour
     public GameObject question2UI;
     public GameObject question3UI;
 
+
     private AudioSource typeSound;
 
     string failQ1 = "We're on course to target"; // the messages that are printed on passing / failing each question
@@ -153,7 +154,8 @@ public class Dialog : MonoBehaviour
 
         question2UI.SetActive(false);
 
-
+        FindObjectOfType<puzzle2>().submarineUI.enabled = true;
+       
         question3UI.SetActive(true);
     }
 
