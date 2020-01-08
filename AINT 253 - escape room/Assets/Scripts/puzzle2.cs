@@ -45,6 +45,8 @@ public class puzzle2 : MonoBehaviour
 
                 if (hit.collider.gameObject.name == "IncreaseValve")
                 {
+                    puzzleBegun = true;
+
                     increaseValve.transform.Rotate(Vector3.forward * 30 * Time.deltaTime); // rotate the valve
                     submarineUI.rectTransform.Rotate(Vector3.forward * 30 * Time.deltaTime);  // and increase the pitch of the submarine
 
@@ -55,6 +57,8 @@ public class puzzle2 : MonoBehaviour
 
                 if (hit.collider.gameObject.name == "DecreaseValve")
                 {
+                    puzzleBegun = true;
+
                     decreaseValve.transform.Rotate(Vector3.back * 30 * Time.deltaTime); // rotate the valve
                     submarineUI.rectTransform.Rotate(Vector3.back * 30 * Time.deltaTime);  // and increase the pitch of the submarine
 
