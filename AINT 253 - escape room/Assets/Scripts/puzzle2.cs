@@ -68,7 +68,7 @@ public class puzzle2 : MonoBehaviour
 
         if (puzzleBegun == true)
         {
-            if (submarineUI.rectTransform.localEulerAngles.z < 45 || submarineUI.rectTransform.localEulerAngles.z > -45) // if the player is succeeding
+            if (submarineUI.rectTransform.localEulerAngles.z < 50) // if the player is succeeding
             {
                 balanceTime -= Time.deltaTime;
                 // cancel this when the player brings it under control
@@ -81,18 +81,30 @@ public class puzzle2 : MonoBehaviour
                 FindObjectOfType<GameManager>().Win(); // they win
             }
 
-            if (submarineUI.rectTransform.localEulerAngles.z > 45 || submarineUI.rectTransform.localEulerAngles.z < -45) // if the submarine tilt is too great
+            if (submarineUI.rectTransform.localEulerAngles.z > 50) // if the submarine tilt is too great
             {
                 failAnimation.SetBool("Trigger Flashing", true);
-                failAudio.Play();
+
+                if (failAudio.isPlaying == false)
+                {
+                    failAudio.Play();
+                }
 
                 // alert the player they are close to failure
             }
 
 
-            if (submarineUI.rectTransform.localEulerAngles.z > 80 || submarineUI.rectTransform.localEulerAngles.z < -45) // if the submarine tilt is far too great
+            if (submarineUI.rectTransform.localEulerAngles.z > 80) // if the submarine tilt is far too great
             {
                 Debug.Log("Pressure overloaded");
+                failAnimation.SetBool("Trigger Flashing", true);
+
+                if (failAudio.isPlaying == false)
+                {
+                    failAudio.Play();
+                }
+
+                failAudio.Play();
                 FindObjectOfType<GameManager>().FailedGame(); // they have failed
             }
         }

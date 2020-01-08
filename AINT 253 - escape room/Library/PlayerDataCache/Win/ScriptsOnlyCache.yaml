@@ -21,6 +21,7 @@ ScriptsOnlyBuild:
     - UnityEditor.Graphs.AnimatorControllerTool
     UnityEditor.TestRunner.dll:
     - UnityEditor.TestTools.TestRunner.Api.CallbacksHolder
+    - UnityEditor.TestTools.TestRunner.TestListCacheData
     UnityEngine.UI.dll:
     - UnityEngine.EventSystems.EventSystem
     - UnityEngine.EventSystems.StandaloneInputModule
@@ -748,4 +749,5 @@ ScriptsOnlyBuild:
   - Assets/Scenes/Room 1.unity
   - Assets/Scenes/GameOver.unity
   - Assets/Scenes/YouWin.unity
-  playerPath: C:/Users/Student/Desktop/Escape Room Build/AINT 253 - escape room.exe
+  playerPath: C:/Users/dsmale/Documents/GitHub/Submarine-style-escape-room/Current
+    Build/AINT 253 - escape room.exe
